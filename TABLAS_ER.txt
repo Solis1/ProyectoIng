@@ -1,0 +1,24 @@
+FARMACIA
+
+TABLA CLIENTES(id_cliente-PRIMARY KEY-FOREIGN KEY int, nombre varchar(20), apeidoPat varchar(20), apeidoMat varchar(20), telefono char(10), direccion varchar(60), email varchar(50) ciudad varchar(20), codigo postal char(5) y estado varchar(20)  
+
+TABLA PRODUCTOS(id_producto PRIMARY KEY-FOREIGN KEY, descripcion varchar(30), precio float, cantidad int)
+
+TABLA VENTA_MAS(id_venta FOREING KEY PRIMARY KEY, id_cliente int, fecha, id_empleado int)
+
+TABLA VENTA_PRO(id_venta, id_producto)
+
+TABLA EMPLEADOS(id_empleado int PRIMARY KEY FOREING KEY, nombre varchar(20), apeidoPat varchar(20), apeidoMat varchar(20), email varchar(50), seguro social int, codigo int, puesto varchar(20), turno varchar(15)
+
+TABLA SUCURSALES(id_sucursal int PRIMARY KEY FOREING KEY, numerosEmpleados int, telefono char(10), direccion varchar(60))
+
+TABLA OFERTAS(id_oferta PRIMARY KEY, id_producto FOREING KEY, oferta int, fecha)
+
+TABLA DEPARTAMENTOS(id_departamento PRIMARY KEY, nombre varchar(25), id_producto FOREING KEY)
+
+TABLA DOCTORES(id_doctor PRIMARY KEY FOREING KEY, nombre varchar(20), apeidoPat varchar(20), apeidoMat varchar(20), telefono char(10), direccion varchar(60))
+
+TABLA CONSULTAS(numero_consulta PRIMARY KEY, id_cliente FOREING KEY, id_doctor FOREING KEY, fecha, diagnostico varchar(100))
+
+
+ 
