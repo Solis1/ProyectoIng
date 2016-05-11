@@ -3,6 +3,7 @@ package clases;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,7 +39,7 @@ public class ConsultasSVT extends HttpServlet {
             cons.setNumeroConsulta(Integer.parseInt(request.getParameter("txtNumeroConsulta")));
             cons.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
             cons.setIddoctor(Integer.parseInt(request.getParameter("txtIdoctro")));
-            cons.setFecha(request.getParameter("txtFecha"));
+            cons.setFecha(Date.valueOf(request.getParameter("txtFecha")));
             cons.setDiagnostico(request.getParameter("txtDiagnostico"));
             
             datosC = new DatosConsultas(cons);

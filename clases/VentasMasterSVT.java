@@ -3,6 +3,7 @@ package clases;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,7 +39,7 @@ public class VentasMasterSVT extends HttpServlet {
             
             ventasM.setIdventa(Integer.parseInt(request.getParameter("txtIdventa")));
             ventasM.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
-            ventasM.setFecha(request.getParameter("txtFecha"));
+            ventasM.setFecha(Date.valueOf(request.getParameter("txtFecha")));
             ventasM.setIdempleado(Integer.parseInt(request.getParameter("txtIdempleado")));    
                     
             datosVM = new DatosVentasMaster(cnn);

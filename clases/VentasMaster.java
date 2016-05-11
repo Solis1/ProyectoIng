@@ -1,10 +1,12 @@
 
 package clases;
 
+import java.sql.Date;
+
 public class VentasMaster {
  
     private int idventa, idcliente, idempleado;
-    private String fecha;
+    private Date fecha;
 
     public int getIdventa() {
         return idventa;
@@ -30,11 +32,11 @@ public class VentasMaster {
         this.idempleado = idempleado;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
     

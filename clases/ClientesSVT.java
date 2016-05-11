@@ -34,7 +34,6 @@ public class ClientesSVT extends HttpServlet {
             cnn = new Conexion();
             cl = new Clientes();
             
-            cl.setIdcliente(Integer.parseInt(request.getParameter("txtIdcliente")));
             cl.setNombre(request.getParameter("txtNombre"));
             cl.setApeidoPaterno(request.getParameter("txtApeidoPaterno"));
             cl.setApeidoMaterno(request.getParameter("txtApeidoMaterno"));

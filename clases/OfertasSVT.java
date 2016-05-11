@@ -3,6 +3,7 @@ package clases;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,7 +38,8 @@ public class OfertasSVT extends HttpServlet {
             ofe.setIdoferta(Integer.parseInt(request.getParameter("txtIdoferta")));
             ofe.setIdproducto(Integer.parseInt(request.getParameter("txtIdproducto")));
             ofe.setOferta(Integer.parseInt(request.getParameter("txtOferta")));
-            ofe.setFecha(request.getParameter("txtFecha"));
+            ofe.setFecha(Date.valueOf(request.getParameter("txtFecha")));
+                    
             
             
             datosO = new DatosOfertas(cnn);
